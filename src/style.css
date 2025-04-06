@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --backdrop: #EFE9DA;
+  --classical-accent: #C2B8A3;
+  --futuristic-accent: #00A3FF;
+  --metallic-silver: #D4D4D4;
+  --deep-black: #1A1A1A;
+  --gold: #FFD700;
+  --marble-white: #F5F5F5;
+  --muted-rose: #D9B8A6;
+}
+
+body {
+  background-color: var(--backdrop);
+  color: var(--deep-black);
+}
+
+button {
+  background: linear-gradient(90deg, var(--futuristic-accent), var(--gold));
+  color: var(--marble-white);
+  border: 1px solid var(--metallic-silver);
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--futuristic-accent);
+}
+
+.gallery-item {
+  border: 2px solid var(--gold);
+  background-color: var(--marble-white);
+}
+
+.gallery-item:hover {
+  border-color: var(--futuristic-accent);
+  box-shadow: 0 0 15px var(--futuristic-accent);
+}
