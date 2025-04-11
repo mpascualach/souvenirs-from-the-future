@@ -53,11 +53,7 @@ const handleClick = () => {
         <div class="absolute left-4 top-4 h-12 w-8 -rotate-12 transform rounded-full bg-futuristicAccent/20"></div>
       </div>
     </div>
-    
-    <!-- Item number with enhanced styling -->
-    <div class="absolute bottom-2 right-2 text-sm font-light text-deepBlack/60">
-      {{ props.index }}
-    </div>
+
   </div>
 </template>
 

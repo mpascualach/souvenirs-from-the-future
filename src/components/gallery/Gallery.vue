@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import GalleryItem from './GalleryItem.vue'
 import GalleryModal from './GalleryModal.vue'
-import TitleSection from './TitleSection.vue'
+import PageTitle from '../shared/PageTitle.vue'
 
 // State for the modal
 const selectedItemIndex = ref<number | null>(null)
@@ -21,10 +21,10 @@ const closeModal = () => {
 </script>
 
 <template>
-<div class="min-h-screen bg-backdrop py-12">
-  <div class="mx-auto px-4">
+<div class="min-h-screen bg-backdrop">
+  <div class="container mx-auto px-4">
     <!-- Classical header with futuristic twist -->
-    <TitleSection title="Gallery" />
+    <PageTitle title="Gallery" />
     
     <!-- Gallery container with neo-classical styling -->
     <div class="relative rounded-lg bg-marbleWhite p-8 shadow-lg backdrop-blur-sm">
@@ -55,12 +55,5 @@ const closeModal = () => {
 </template>
 
 <style scoped>
-.container {
-  /* Add a subtle gradient overlay */
-  background: linear-gradient(
-    45deg,
-    rgba(194, 184, 163, 0.1), /* classicalAccent */
-    rgba(0, 163, 255, 0.05)   /* futuristicAccent */
-  );
-}
+
 </style>
