@@ -37,15 +37,15 @@ const links = [
         <h1 class="text-2xl font-bold">Souvenirs from the Future</h1>
 
         <nav class="flex items-center gap-4 text-md">
-            <a
+            <router-link
                 v-for="link in links"
                 :key="link.href"
-                :href="link.href"
+                :to="link.href"
                 @mouseenter="handleMouseEnter"
                 @mouseleave="handleMouseLeave"
                 class="transition-colors duration-300">
                 {{ link.label }}
-            </a>
+            </router-link>
         </nav>
     </header>
 </template>

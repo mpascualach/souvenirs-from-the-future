@@ -21,37 +21,37 @@ const closeModal = () => {
 </script>
 
 <template>
-<div class="min-h-screen bg-backdrop">
-  <div class="container mx-auto px-4">
-    <!-- Classical header with futuristic twist -->
-    <PageTitle title="Gallery" />
-    
-    <!-- Gallery container with neo-classical styling -->
-    <div class="relative rounded-lg bg-marbleWhite p-8 shadow-lg backdrop-blur-sm">
-      <!-- Decorative border element -->
-      <div class="absolute inset-0 rounded-lg border border-classicalAccent"></div>
+  <div class="min-h-screen bg-backdrop">
+    <div class="container mx-auto px-4">
+      <!-- Classical header with futuristic twist -->
+      <PageTitle title="Gallery" />
       
-      <!-- Gallery grid -->
-      <div class="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 bg-mutedRose">
-        <!-- Gallery items -->
-        <GalleryItem 
-          v-for="n in 6" 
-          :key="n" 
-          :index="n"
-          @click="handleItemClick"
-        />
+      <!-- Gallery container with neo-classical styling -->
+      <div class="relative rounded-lg bg-marbleWhite p-8 shadow-lg backdrop-blur-sm">
+        <!-- Decorative border element -->
+        <div class="absolute inset-0 rounded-lg border border-classicalAccent"></div>
+        
+        <!-- Gallery grid -->
+        <div class="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 bg-mutedRose">
+          <!-- Gallery items -->
+          <GalleryItem 
+            v-for="n in 6" 
+            :key="n" 
+            :index="n"
+            @click="handleItemClick"
+          />
+        </div>
       </div>
     </div>
+    
+    <!-- Gallery Modal -->
+    <GalleryModal 
+      v-if="selectedItemIndex !== null"
+      :index="selectedItemIndex"
+      :is-open="isModalOpen"
+      @close="closeModal"
+    />
   </div>
-  
-  <!-- Gallery Modal -->
-  <GalleryModal 
-    v-if="selectedItemIndex !== null"
-    :index="selectedItemIndex"
-    :is-open="isModalOpen"
-    @close="closeModal"
-  />
-</div>
 </template>
 
 <style scoped>
