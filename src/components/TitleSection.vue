@@ -1,6 +1,14 @@
+<script setup lang="ts">
+    defineProps<{
+        title: string
+    }>()
+</script>   
+
 <template>
-    <h1 class="glitch-text mb-12 text-center font-quicksand text-5xl font-bold tracking-wide text-deepBlack">
-        Souvenirs from the Future
+    <h1
+      class="glitch-text mb-12 text-center font-serif text-5xl tracking-wide text-deepBlack font-bold"
+      :data-text="title">
+      {{ title }}
     </h1>
 </template>
 
@@ -11,7 +19,7 @@
 }
 
 .glitch-text::after {
-  content: 'Souvenirs from the Future';
+  content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
@@ -23,3 +31,4 @@
   z-index: -1;
 }
 </style>
+

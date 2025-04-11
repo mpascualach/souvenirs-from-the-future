@@ -15,6 +15,7 @@ const modalRef = ref<HTMLElement | null>(null)
 const contentRef = ref<HTMLElement | null>(null)
 
 // Function to determine which shape to display based on index
+// These shapes are placeholders and will be replaced with actual artwork + description
 const getShapeClass = (index: number) => {
   const shapes = [
     'h-48 w-48 rounded-full border-2 border-classicalAccent/40', // Circle

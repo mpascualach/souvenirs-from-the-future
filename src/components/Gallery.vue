@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import GalleryItem from './GalleryItem.vue'
 import GalleryModal from './GalleryModal.vue'
+import TitleSection from './TitleSection.vue'
 
 // State for the modal
 const selectedItemIndex = ref<number | null>(null)
@@ -21,11 +22,9 @@ const closeModal = () => {
 
 <template>
 <div class="min-h-screen bg-backdrop py-12">
-  <div class="container mx-auto px-4">
+  <div class="mx-auto px-4">
     <!-- Classical header with futuristic twist -->
-    <h1 class="mb-12 text-center font-serif text-5xl font-light tracking-wide text-deepBlack">
-      Souvenirs from the Future
-    </h1>
+    <TitleSection title="Gallery" />
     
     <!-- Gallery container with neo-classical styling -->
     <div class="relative rounded-lg bg-marbleWhite p-8 shadow-lg backdrop-blur-sm">
