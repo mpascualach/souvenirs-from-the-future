@@ -101,7 +101,7 @@ onUnmounted(() => {
       <!-- Gallery item content -->
       <div class="flex flex-col items-center">
         <h2 class="mb-6 text-center font-quicksand text-3xl font-bold text-deepBlack">
-          Gallery Item {{ index }}
+          Gallery Item {{ props.index }}
         </h2>
         
         <div class="relative flex h-96 w-96 items-center justify-center">
@@ -113,10 +113,10 @@ onUnmounted(() => {
           <div class="absolute inset-0 bg-gradient-to-br from-metallicSilver/20 to-backdrop/30"></div>
           
           <!-- Dynamic shape based on index -->
-          <div :class="getShapeClass(index)"></div>
+          <div :class="getShapeClass(props.index)"></div>
           
           <!-- Optional accent shape -->
-          <div v-if="index % 2 === 0" class="absolute h-64 w-64 rounded-full border border-futuristicAccent/30"></div>
+          <div v-if="props.index % 2 === 0" class="absolute h-64 w-64 rounded-full border border-futuristicAccent/30"></div>
           
           <!-- Simulated brush strokes -->
           <div class="absolute bottom-8 right-8 h-16 w-32 rotate-12 transform rounded-full bg-mutedRose/20"></div>
